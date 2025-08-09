@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/waiting.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>ცოტა ადრეა!</h1>
+            <p class="message">მზად ვიქნები სულ რაღაც!</p>
+            <div id="countdown" class="countdown">ჩატვირთვა...</div>
+            <a href="/" class="refresh-button">განახლება</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/waiting.js') }}"></script>
+</body>
+</html>

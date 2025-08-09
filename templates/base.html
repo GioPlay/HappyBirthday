@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>საზიზღარი Birthday!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&Caveat:wght@400;700&Open+Sans:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="stars-container"></div>
+    <canvas id="fireworks-canvas"></canvas>
+    <nav class="navbar">
+        <ul>
+            <li><a href="{{ url_for('index') }}">მთავარი</a></li>
+            <li><a href="{{ url_for('wishes') }}">სურვილები</a></li>
+            <li><button id="music-toggle" class="music-toggle">🔊</button></li>
+        </ul>
+    </nav>
+    <main class="fade-in">
+        {% block content %}{% endblock %}
+    </main>
+        <audio id="background-music" class="hidden-audio" loop>
+        <source src="{{ url_for('static', filename='audio/birthday_music.mp3') }}" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+    <button id="show-player-btn" class="show-player-btn">🎵 გახსნა</button>
+    <div id="custom-audio-player" class="audio-player">
+        <button id="play-pause-btn">▶</button>
+        <input type="range" id="seek-bar" min="0" value="0">
+        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

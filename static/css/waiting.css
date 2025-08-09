@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Noto Serif Georgian', serif;
+    background: linear-gradient(135deg, #e8ece5, #d9e4d8);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a4a4a;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #3e5c4c;
+}
+
+.message {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #5a6f60;
+}
+
+.countdown {
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #4a6a55;
+    background: rgba(74, 106, 85, 0.1);
+    padding: 12px 25px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    display: inline-block;
+}
+
+.refresh-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4a6a55;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+.refresh-button:hover {
+    background-color: #3e5c4c;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(62, 92, 76, 0.3);
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .message {
+        font-size: 1.1em;
+    }
+
+    .countdown {
+        font-size: 1.4em;
+        padding: 10px 20px;
+        margin-bottom: 25px;
+    }
+
+    .refresh-button {
+        padding: 10px 25px;
+    }
+}
